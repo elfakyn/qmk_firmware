@@ -148,8 +148,8 @@ bool process_midi(uint16_t keycode, keyrecord_t *record) {
         case QK_MIDI_VELOCITY_DOWN:
             if (record->event.pressed && midi_config.velocity > 0) {
                 if (midi_config.velocity == 127) {
-                    midi_config.velocity -= 7;
-                } else if (midi_config.velocity > 9) {
+                    midi_config.velocity = 120;
+                } else if (midi_config.velocity >= 10) {
                     midi_config.velocity -= 10;
                 } else {
                     midi_config.velocity = 0;
@@ -160,7 +160,7 @@ bool process_midi(uint16_t keycode, keyrecord_t *record) {
             return false;
         case QK_MIDI_VELOCITY_UP:
             if (record->event.pressed && midi_config.velocity < 127) {
-                if (midi_config.velocity < 118) {
+                if (midi_config.velocity <= 117) {
                     midi_config.velocity += 10;
                 } else {
                     midi_config.velocity = 127;

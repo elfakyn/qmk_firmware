@@ -133,6 +133,12 @@ bool process_midi(uint16_t keycode, keyrecord_t *record) {
                 dprintf("midi transpose %d\n", midi_config.transpose);
             }
             return false;
+        case MIDI_VELOCITY_MAX: // Janky fix for max velocity not correctly computing due to rounding down
+            if (record->event.pressed) {
+                midi_config.velocity = 127;
+                dprintf("midi velocity %d\n", midi_config.velocity);
+            }
+            return false;
         case MIDI_VELOCITY_MIN ... MIDI_VELOCITY_MAX:
             if (record->event.pressed) {
                 midi_config.velocity = compute_velocity(keycode - MIDI_VELOCITY_MIN);
@@ -142,9 +148,9 @@ bool process_midi(uint16_t keycode, keyrecord_t *record) {
         case QK_MIDI_VELOCITY_DOWN:
             if (record->event.pressed && midi_config.velocity > 0) {
                 if (midi_config.velocity == 127) {
+                    midi_config.velocity -= 7;
+                } else if (midi_config.velocity > 9) {
                     midi_config.velocity -= 10;
-                } else if (midi_config.velocity > 12) {
-                    midi_config.velocity -= 13;
                 } else {
                     midi_config.velocity = 0;
                 }
@@ -154,8 +160,8 @@ bool process_midi(uint16_t keycode, keyrecord_t *record) {
             return false;
         case QK_MIDI_VELOCITY_UP:
             if (record->event.pressed && midi_config.velocity < 127) {
-                if (midi_config.velocity < 115) {
-                    midi_config.velocity += 13;
+                if (midi_config.velocity < 118) {
+                    midi_config.velocity += 10;
                 } else {
                     midi_config.velocity = 127;
                 }

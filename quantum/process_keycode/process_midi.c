@@ -54,7 +54,7 @@ inline uint8_t compute_velocity(uint8_t setting) {
 void midi_init(void) {
     midi_config.octave              = QK_MIDI_OCTAVE_2 - MIDI_OCTAVE_MIN;
     midi_config.transpose           = 0;
-    midi_config.velocity            = 127;
+    midi_config.velocity            = 100;
     midi_config.channel             = 0;
     midi_config.modulation_interval = 8;
 

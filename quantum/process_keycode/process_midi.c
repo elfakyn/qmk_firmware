@@ -135,7 +135,7 @@ bool process_midi(uint16_t keycode, keyrecord_t *record) {
                 dprintf("midi transpose %d\n", midi_config.transpose);
             }
             return false;
-        case MIDI_VELOCITY_MIN ... MIDI_VELOCITY_7:
+        case MIDI_VELOCITY_MIN ... QK_MIDI_VELOCITY_7:
             if (record->event.pressed) {
                 midi_config.velocity = compute_velocity(keycode - MIDI_VELOCITY_MIN);
                 dprintf("midi velocity %d\n", midi_config.velocity);

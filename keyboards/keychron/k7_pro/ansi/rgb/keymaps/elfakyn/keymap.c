@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______   , _______   , KC_MSTP   ,                               KC_MPLY,                                      _______, _______, _______, KC_MPRV, KC_VOLD, KC_MNXT
     ),
     [4] = LAYOUT_ansi_68(
-        KC_NO    , MI_CH1   , MI_CH2   , MI_CH3   , MI_CH4   , MI_CH5   , MI_CH6   , MI_CH7   , MI_CH8   , MI_CH9   , MI_CH16  , KC_NO    , KC_NO    , KC_NO    ,            _______  ,
-        KC_NO    , KC_NO    , KC_NO    , MI_CH14  , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,            _______  ,
-        KC_NO    , MI_CH10  , KC_NO    , MI_CH13  , MI_CH15  , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,            KC_NO    ,            _______  ,
-        KC_NO    ,            KC_NO    , KC_NO    , MI_CH12  , KC_NO    , MI_CH11  , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,            KC_NO    , _______  , _______  ,
-        KC_NO    , KC_NO    , KC_NO    ,                                  _______  ,                                  KC_NO    , KC_NO    , KC_NO    , _______  , _______  , _______
+        _______  , MI_CH1   , MI_CH2   , MI_CH3   , MI_CH4   , MI_CH5   , MI_CH6   , MI_CH7   , MI_CH8   , MI_CH9   , MI_CH16  , KC_NO    , KC_NO    , _______  ,            _______  ,
+        _______  , KC_NO    , KC_NO    , MI_CH14  , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , _______  ,            _______  ,
+        _______  , MI_CH10  , KC_NO    , MI_CH13  , MI_CH15  , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,            _______  ,            _______  ,
+        _______  ,            KC_NO    , KC_NO    , MI_CH12  , KC_NO    , MI_CH11  , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,            _______  , _______  , _______  ,
+        _______  , _______  , _______  ,                                  _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______
     )
 };

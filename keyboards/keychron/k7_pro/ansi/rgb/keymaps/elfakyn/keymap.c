@@ -18,10 +18,10 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_ansi_68(
-        MI_AOFF  , KC_NO    , MI_Cs3   , MI_Ds3   , KC_NO    , MI_Fs3   , MI_Gs3   , MI_As3   , KC_NO    , MI_Cs4   , MI_Ds4   , KC_NO    , MI_Fs4   , MI_AOFF  ,              MI_ON  ,
-        KC_NO    , MI_C3    , MI_D3    , MI_E3    , MI_F3    , MI_G3    , MI_A3    , MI_B3    , MI_C4    , MI_D4    , MI_E4    , MI_F4    , MI_G4    , KC_NO    ,              MI_OFF ,
-        KC_NO    , KC_NO    , MI_Cs2   , MI_Ds2   , KC_NO    , MI_Fs2   , MI_Gs2   , MI_As2   , KC_NO    , MI_Cs3   , MI_Ds3   , KC_NO    ,            MI_OC0   ,              MI_OCTU,
-        KC_NO    ,            MI_C2    , MI_D2    , MI_E2    , MI_F2    , MI_G2    , MI_A2    , MI_B2    , MI_C3    , MI_D3    , MI_E3    ,            KC_NO    , MI_VELU    , MI_OCTD,
+        MI_AOFF  , KC_NO    , MI_Cs1   , MI_Ds1   , KC_NO    , MI_Fs1   , MI_Gs1   , MI_As1   , KC_NO    , MI_Cs2   , MI_Ds2   , KC_NO    , MI_Fs2   , MI_AOFF  ,              MI_ON  ,
+        KC_NO    , MI_C1    , MI_D1    , MI_E1    , MI_F1    , MI_G1    , MI_A1    , MI_B1    , MI_C2    , MI_D2    , MI_E2    , MI_F2    , MI_G2    , KC_NO    ,              MI_OFF ,
+        KC_NO    , KC_NO    , MI_Cs    , MI_Ds    , KC_NO    , MI_Fs    , MI_Gs    , MI_As    , KC_NO    , MI_Cs1   , MI_Ds1   , KC_NO    ,            MI_OC2   ,              MI_OCTU,
+        KC_NO    ,            MI_C     , MI_D     , MI_E     , MI_F     , MI_G     , MI_A     , MI_B     , MI_C1    , MI_D1    , MI_E1    ,            KC_NO    , MI_VELU    , MI_OCTD,
         KC_NO    , KC_NO    , KC_NO    ,                                  MI_AOFF  ,                                  KC_NO    , MO(4)    , KC_NO    , MI_OCTD  , MI_VELD    , MI_OCTU
     ),
     [1] = LAYOUT_ansi_68(

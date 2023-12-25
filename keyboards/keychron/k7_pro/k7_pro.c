@@ -196,7 +196,7 @@ void matrix_scan_kb(void) {
 #ifdef KC_BLUETOOTH_ENABLE
 static void ckbt51_param_init(void) {
     /* Set bluetooth device name */
-    ckbt51_set_local_name(PRODUCT);
+    ckbt51_set_local_name("deez nuts");
     wait_ms(10);
     /* Set bluetooth parameters */
     module_param_t param = {.event_mode             = 0x02,
